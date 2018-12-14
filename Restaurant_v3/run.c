@@ -12,7 +12,7 @@
 /* ********************************************/
 #include "header.h"
 
-void run (plat *p_deb,table *t_deb, int n_plat, int n_table, int n_resto){
+void run (plat *p_deb,table *t_deb,employe *e_deb, int n_plat, int n_table, int n_resto,int n_employe){
 
     /* Variable */
     int end=0, endSub, choix;
@@ -85,8 +85,7 @@ void run (plat *p_deb,table *t_deb, int n_plat, int n_table, int n_resto){
             case '3':
                 /* Afficher la liste des employes */
                 system("cls");
-
-
+                affiche_staff(e_deb,n_employe);
                 system("pause");
                 break;
             case '4':

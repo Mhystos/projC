@@ -20,9 +20,7 @@ main(){
     int nb_table=0;
 
     int nb_plat=0;
-
     int nb_employe=0;
-
     /* Compteur */
     int i;
 
@@ -142,12 +140,12 @@ main(){
 
 
     nb_place_dispo = nb_resto; // A ce moment-ci, après l'initialisation, ils sont égaux
-    affiche_staff(e_deb,nb_employe);
-    //run (p_deb,t_deb,nb_plat,nb_table,nb_resto);
+
+    run (p_deb,t_deb,e_deb,nb_plat,nb_table,nb_resto,nb_employe);
     //affiche_carte(p_deb,nb_plat);
     //clean_buffer(nb_resto);
     //affiche_table(t_deb,nb_table,nb_resto);
-
+    //affiche_staff(e_deb,nb_employe);
 
 
 

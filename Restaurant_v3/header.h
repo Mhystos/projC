@@ -54,7 +54,7 @@ typedef struct employe{
 
 /* Appel des différents prototypes */
 
-    void run (plat *p_deb,table *t_deb, int n_plat, int n_table, int n_resto);
+    void run (plat *p_deb,table *t_deb,employe *e_deb, int n_plat, int n_table, int n_resto, int n_employe);
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);
     void affiche_staff(employe *e_deb, int n_employe);

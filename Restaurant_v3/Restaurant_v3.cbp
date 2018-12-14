@@ -46,6 +46,9 @@
 			<Option compile="0" />
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="ajout_staff.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="carte.dat">
 			<Option virtualFolder="#dat/" />
 			<Option target="&lt;{~None~}&gt;" />
