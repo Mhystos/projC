@@ -18,24 +18,24 @@ void affiche_carte(plat *p_deb, int n){
     printf("+-----------------------------------------------------+\n");
 
     p_courant = p_deb;
-    printf("|%2d |%-35s| %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
-/*    for(i=1;i<=j;i++){
-        printf("|%2d |%-35s| %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
+    //printf("|%2d |%-35s| %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
+    for(i=1;i<=j;i++){
+        printf("|%2d | %-35s      | %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
         p_courant=p_courant->p_suivant;
     }
     printf("+-----------------------------------------------------+\n");
     printf("|                        Plats                        |\n");
     printf("+-----------------------------------------------------+\n");
     for(i=1;i<=j;i++){
-        printf("|%2d |%-35s| %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
+        printf("|%2d | %-35s      | %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
         p_courant=p_courant->p_suivant;
     }
     printf("+-----------------------------------------------------+\n");
     printf("|                      Desserts                       |\n");
     printf("+-----------------------------------------------------+\n");
     for(i=1;i<=j;i++){
-        printf("|%2d |%-35s| %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
+        printf("|%2d | %-35s      | %5.2f|\n",p_courant->num_plats,p_courant->intitule,p_courant->prix);
         p_courant=p_courant->p_suivant;
     }
-    printf("+-----------------------------------------------------+\n"); */
+    printf("+-----------------------------------------------------+\n");
 }

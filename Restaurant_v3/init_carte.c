@@ -1,6 +1,6 @@
 #include "header.h"
 
-int init_carte(plat *p_deb){
+int init_carte(plat **p_deb){
 
     /* Ouverture du fichier de lecture */
     FILE *fdat_carte;
@@ -31,11 +31,11 @@ int init_carte(plat *p_deb){
     }
 
     /* On termine la liste avec l'adresse NULL */
-    p_courant = p_deb;
+    /*p_courant = p_deb;
     for(i=1;i<nb_plat;i++){
         p_courant=p_courant->p_suivant;
     }
-    p_courant->p_suivant=NULL;
+    p_courant->p_suivant=NULL;*/
     free(p_suivant);
 
     /* On retourne le nombre de plat */

@@ -49,7 +49,7 @@ typedef struct client{
 /* Appel des différents prototypes */
 
     int init_table(table *t_deb, int *nb_tab);
-    int init_carte(plat *p_deb);
+    int init_carte(plat **p_deb);
     void affiche_carte(plat *p_deb, int n);
     void clean_buffer(int integer);
 
