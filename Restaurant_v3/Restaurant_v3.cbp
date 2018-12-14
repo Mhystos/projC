@@ -38,6 +38,11 @@
 		<Unit filename="affiche_table.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="ajout_client.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="carte.dat">
 			<Option virtualFolder="#dat/" />
 			<Option target="&lt;{~None~}&gt;" />
@@ -47,9 +52,6 @@
 		</Unit>
 		<Unit filename="header.h">
 			<Option compile="1" />
-		</Unit>
-		<Unit filename="init_table.c">
-			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

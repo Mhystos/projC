@@ -11,10 +11,11 @@ main(){
     /* Structure */
     table *t_deb, *t_courant, *t_suivant;
     plat *p_deb, *p_courant, *p_suivant;
+    //client *c_deb,*c_courant, *c_suivant, *c_intercale;
 
     /* Variable */
     int nb_place_dispo;
-    int nb_place=0;
+    int nb_resto=0;
     int nb_table=0;
 
     int nb_plat=0;
@@ -23,17 +24,18 @@ main(){
     int i;
 
     /* Pointer */
-
+    int *nb_client;
 
     /* Fichier dat */
     FILE *fdat_carte, *fdat_table;
     fdat_carte=fopen("carte.dat","r");
     fdat_table=fopen("table.dat","r");
-    char car[2];
+
 
     /*******************************************************/
     /*                      PLAT                           */
     /*******************************************************/
+    char car[2]; // Pour le passage à la ligne
 
     /* Allocation de mémoire pour la liste chainée de plat */
     p_deb = malloc(sizeof(plat));
@@ -75,7 +77,6 @@ main(){
      for(i=1;i<=nb_table;i++){
         fscanf(fdat_table,"%2d%2d",&t_courant->numero,&t_courant->place);
         t_courant->libre = 0;
-        t_courant->addition =0.;
 
         t_suivant=malloc(sizeof(table));
         t_courant->t_suivant=t_suivant;
@@ -84,24 +85,32 @@ main(){
 
     /*On termine la liste avec l'adresse NULL */
     t_courant=t_deb;
-    nb_place+=t_deb->place;
+    nb_resto+=t_deb->place;
     for(i=1;i<nb_table;i++){
         t_courant=t_courant->t_suivant;
-        nb_place+=t_courant->place;
+        nb_resto+=t_courant->place;
     }
     t_courant->t_suivant=NULL;
     free(t_suivant);
+
+    /*******************************************************/
+    /*                      CLIENT                         */
+    /*******************************************************/
+
+    /* Allocation de mémoire pour la liste  de client      */
+    //c_deb=malloc(sizeof(client));
+    //c_courant=c_deb;
 
     /*******************************************************/
     /*                      TESTS                          */
     /*******************************************************/
 
 
-    nb_place_dispo = nb_place; // A ce moment-ci, après l'initialisation, ils sont égaux
-
-    affiche_carte(p_deb,nb_plat);
-    clean_buffer(nb_place);
-    affiche_table(t_deb,nb_table,nb_place);
+    nb_place_dispo = nb_resto; // A ce moment-ci, après l'initialisation, ils sont égaux
+    run (p_deb,t_deb,nb_plat,nb_table,nb_resto);
+    //affiche_carte(p_deb,nb_plat);
+    //clean_buffer(nb_resto);
+    //affiche_table(t_deb,nb_table,nb_resto);
 
 
 

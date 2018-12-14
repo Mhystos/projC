@@ -30,24 +30,24 @@ typedef struct plat{
     int numero;
     int place;
     int libre;
-    float addition;
-//    struct client cl;
     struct table *t_suivant;
 }table;
 
 /*Structure d'un client */
 
-typedef struct client{
-    int nb_client;
+/*typedef struct client
+    int num_table;
+    int nombre;
     char lb_entree[37];
     char lb_plat[37];
     char lb_dessert[37];
     struct client *c_suivant;
     int heures; // En heure
-}client;
+}client;*/
 
 /* Appel des différents prototypes */
 
+    void run (plat *p_deb,table *t_deb, int n_plat, int n_table, int n_resto);
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);
     void clean_buffer(int integer);
