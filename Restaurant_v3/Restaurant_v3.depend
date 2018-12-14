@@ -26,3 +26,30 @@
 1544740697 source:d:\2bi1-b1\q1\c\v3\restaurant_v3\init_carte.c
 	"header.h"
 
+1544723565 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\clean_buffer.c
+	"header.h"
+
+1544777873 d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1544777755 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\main.c
+	"header.h"
+
+1544735691 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\run.c
+
+1544777376 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_carte.c
+	"header.h"
+
+1544777828 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1544777587 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\init_carte.c
+	"header.h"
+
+1544777587 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\init_table.c
+	"header.h"
+

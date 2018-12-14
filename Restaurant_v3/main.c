@@ -22,13 +22,13 @@ main(){
     /* Appel de fonction */
     /* Initialisation */
     nb_place = init_table(&t_deb, &nb_tab);
-    nb_plt = init_carte(&p_deb);
+    nb_plt = init_carte(p_deb);
     clean_buffer(nb_place);
     nb_place_dispo = nb_place; // A ce moment-ci, après l'initialisation, ils sont égaux
 
     /* Tests des fonctions */
 
-    affiche_carte(&p_deb,nb_plt);
+    affiche_carte(p_deb,nb_plt);
     //printf("%d %d", nb_place,nb_place_dispo);
     //affiche_carte(plt);
 
