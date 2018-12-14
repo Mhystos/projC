@@ -6,7 +6,7 @@
 
 #include "header.h"
 
-main(){
+int main(){
 
     /* Structure */
     table *t_deb, *t_courant, *t_suivant;
@@ -56,6 +56,7 @@ main(){
     affiche_carte(p_deb,nb_plat);
 
     /* Initialisation */
+<<<<<<< HEAD
     //nb_place = init_table(&t_deb, &nb_tab);
     //nb_plt = init_carte(&p_deb);
     //clean_buffer(nb_place);
@@ -64,10 +65,17 @@ main(){
     /* Tests des fonctions */
     //printf("\n!!!!Plat!!!!!: %s, %d", p_deb -> intitule, p_deb -> num_plats);
     //affiche_carte(&p_deb,nb_plt);
+=======
+    nb_place = init_table(&t_deb, &nb_tab);
+    nb_plt = init_carte(p_deb);
+    printf("\n!!!!Plat!!!!!: %s, %d", p_deb -> intitule, p_deb -> num_plats);
+    //clean_buffer(nb_place);
+  //  nb_place_dispo = nb_place; // A ce moment-ci, après l'initialisation, ils sont égaux
+
+    /* Tests des fonctions */
+
+//    affiche_carte(p_deb,nb_plt);
+>>>>>>> 92dcac326ac0e317519ee8c56f7a808c69c4e0c5
     //printf("%d %d", nb_place,nb_place_dispo);
     //affiche_carte(plt);
-
-
-
-
 }
