@@ -11,6 +11,7 @@ main(){
     /* Structure */
     table *t_deb, *t_courant, *t_suivant;
     plat *p_deb, *p_courant, *p_suivant;
+    employe *e_deb, *e_courant, *e_suivant, *e_precedent;
     //client *c_deb,*c_courant, *c_suivant, *c_intercale;
 
     /* Variable */
@@ -20,6 +21,8 @@ main(){
 
     int nb_plat=0;
 
+    int nb_employe=0;
+
     /* Compteur */
     int i;
 
@@ -27,9 +30,10 @@ main(){
     int *nb_client;
 
     /* Fichier dat */
-    FILE *fdat_carte, *fdat_table;
+    FILE *fdat_carte, *fdat_table, *fdat_staff;
     fdat_carte=fopen("carte.dat","r");
     fdat_table=fopen("table.dat","r");
+    fdat_staff=fopen("staff.dat","r");
 
 
     /*******************************************************/
@@ -94,6 +98,39 @@ main(){
     free(t_suivant);
 
     /*******************************************************/
+    /*                      EMPLOYE                        */
+    /*******************************************************/
+
+    /*  Allocation de mémoire pour la liste des employes   */
+    e_deb = malloc(sizeof(employe));
+    e_courant=e_deb;
+
+    /*Lecture de staff.dat*/
+    fgets(e_courant->nom,21,fdat_staff); //Remplacer par des fdat
+    while (!feof(fdat_staff)){
+        fgets(e_courant->prenom,21,fdat_staff);
+        fgets(e_courant->role,10,fdat_staff);
+        fgets(car,2,fdat_staff);
+        nb_employe++;
+
+        e_suivant=malloc(sizeof(employe));
+        e_courant->e_suivant=e_suivant;
+        e_courant=e_suivant;
+
+        fgets(e_courant->nom,20,fdat_staff);
+    }
+
+
+    /* On termine la liste avec l'adresse NULL*/
+    e_courant=e_deb;
+    for(i=1;i<nb_employe;i++){
+        e_courant=e_courant->e_suivant;
+    }
+    e_courant->e_suivant=NULL;
+    free(e_suivant);
+
+
+    /*******************************************************/
     /*                      CLIENT                         */
     /*******************************************************/
 
@@ -107,7 +144,8 @@ main(){
 
 
     nb_place_dispo = nb_resto; // A ce moment-ci, après l'initialisation, ils sont égaux
-    run (p_deb,t_deb,nb_plat,nb_table,nb_resto);
+    affiche_staff(e_deb,nb_employe);
+    //run (p_deb,t_deb,nb_plat,nb_table,nb_resto);
     //affiche_carte(p_deb,nb_plat);
     //clean_buffer(nb_resto);
     //affiche_table(t_deb,nb_table,nb_resto);

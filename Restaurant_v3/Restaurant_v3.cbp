@@ -35,6 +35,9 @@
 		<Unit filename="affiche_carte.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="affiche_staff.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="affiche_table.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -58,6 +61,9 @@
 		</Unit>
 		<Unit filename="run.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="staff.dat">
+			<Option virtualFolder="#dat/" />
 		</Unit>
 		<Unit filename="table.dat">
 			<Option virtualFolder="#dat/" />

@@ -25,14 +25,21 @@ typedef struct plat{
     struct plat *p_suivant;
 } plat;
 
- /*Structure d'une table*/
- typedef struct table{
+/*Structure d'une table*/
+typedef struct table{
     int numero;
     int place;
     int libre;
     struct table *t_suivant;
 }table;
 
+/*Structure d'un membre du personnel*/
+typedef struct employe{
+    char nom[21];
+    char prenom[21];
+    char role[10];
+    struct employe *e_suivant;
+}employe;
 /*Structure d'un client */
 
 /*typedef struct client
@@ -50,6 +57,7 @@ typedef struct plat{
     void run (plat *p_deb,table *t_deb, int n_plat, int n_table, int n_resto);
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);
+    void affiche_staff(employe *e_deb, int n_employe);
     void clean_buffer(int integer);
 
 #endif // HEADER_H_INCLUDED
