@@ -62,11 +62,11 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="run.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="staff.dat">
 			<Option virtualFolder="#dat/" />
+		</Unit>
+		<Unit filename="supp_staff.c">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="table.dat">
 			<Option virtualFolder="#dat/" />
