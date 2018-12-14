@@ -35,6 +35,9 @@
 		<Unit filename="affiche_carte.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="affiche_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="carte.dat">
 			<Option virtualFolder="#dat/" />
 			<Option target="&lt;{~None~}&gt;" />
@@ -44,9 +47,6 @@
 		</Unit>
 		<Unit filename="header.h">
 			<Option compile="1" />
-		</Unit>
-		<Unit filename="init_carte.c">
-			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="init_table.c">
 			<Option compilerVar="CC" />

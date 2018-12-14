@@ -1,3 +1,14 @@
+/* ********************************************/
+/*                                            */
+/*   Fichier ayant pour but d'afficher la     */
+/*   liste chainée de plat                    */
+/*                                            */
+/*   By: François Mat & Geerts Quentin        */
+/*                                            */
+/*   Created: 2018/12/07                      */
+/*   Updated: 2018/12/13                      */
+/*                                            */
+/* ********************************************/
 #include "header.h"
 
 /* Il a toujours un nombre identique d'entrées, de plats et de desserts */
