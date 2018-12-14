@@ -34,7 +34,7 @@
 	<stdlib.h>
 	<string.h>
 
-1544798679 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\main.c
+1544798865 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\main.c
 	"header.h"
 
 1544788566 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\run.c
@@ -60,6 +60,6 @@
 1544784452 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\ajout_client.c
 	"header.h"
 
-1544798689 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_staff.c
+1544799108 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_staff.c
 	"header.h"
 

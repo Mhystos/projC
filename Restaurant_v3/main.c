@@ -106,18 +106,16 @@ main(){
     e_courant=e_deb;
 
     /*Lecture de staff.dat*/
-    fgets(e_courant->nom,21,fdat_staff); //Remplacer par des fdat
+    fscanf(fdat_staff,"%20s",e_courant->nom);
     while (!feof(fdat_staff)){
-        fgets(e_courant->prenom,21,fdat_staff);
-        fgets(e_courant->role,10,fdat_staff);
-        fgets(car,2,fdat_staff);
+        fscanf(fdat_staff,"%20s%10s",e_courant->prenom,e_courant->role);
         nb_employe++;
 
         e_suivant=malloc(sizeof(employe));
         e_courant->e_suivant=e_suivant;
         e_courant=e_suivant;
 
-        fgets(e_courant->nom,20,fdat_staff);
+        fscanf(fdat_staff,"%20s",e_courant->nom);
     }
 
 
