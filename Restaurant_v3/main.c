@@ -25,22 +25,23 @@ main(){
     int end=0, choix;
 
     /* Compteur */
-    int i;
+    int i,j;
 
     /* Pointeur */
     int *nb_place_dispo;
 
     /* Fichier dat */
-    FILE *fdat_carte, *fdat_table, *fdat_staff;
+    FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client;
     fdat_carte=fopen("carte.dat","r");
     fdat_table=fopen("table.dat","r");
     fdat_staff=fopen("staff.dat","r");
+    fdat_client=fopen("client.dat","r");
 
 
     /*******************************************************/
     /*                      PLAT                           */
     /*******************************************************/
-    char car[2]; // Pour le passage à la ligne
+    char car[3]; // Pour le passage à la ligne
 
     /* Allocation de mémoire pour la liste chainée de plat */
     p_deb = malloc(sizeof(plat));
@@ -106,16 +107,16 @@ main(){
     e_courant=e_deb;
 
     /*Lecture de staff.dat*/
-    fscanf(fdat_staff,"%20s",e_courant->nom);
+    fscanf(fdat_staff,"%20s",&e_courant->nom);
     while (!feof(fdat_staff)){
-        fscanf(fdat_staff,"%20s%10s",e_courant->prenom,e_courant->role);
+        fscanf(fdat_staff,"%20s%10s",&e_courant->prenom,&e_courant->role);
         nb_employe++;
 
         e_suivant=malloc(sizeof(employe));
         e_courant->e_suivant=e_suivant;
         e_courant=e_suivant;
 
-        fscanf(fdat_staff,"%20s",e_courant->nom);
+        fscanf(fdat_staff,"%20s",&e_courant->nom);
     }
 
 
@@ -136,9 +137,41 @@ main(){
     c_deb=malloc(sizeof(client));
     c_courant=c_deb;
 
+    /* Lecture de client.dat */
+/*    fscanf(fdat_client,"%2d",&nb_client);
+    for(i=1;i<=nb_client;i++){
+        fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
+        for (j=1;j<=c_courant->nombre;j++){
+            fscanf(fdat_client,"%2d %2d %2d %2d",&c_courant->entree[j],&c_courant->platP[j],&c_courant->dessert[j],&c_courant->boisson[j]);
+        }
+        c_suivant=malloc(sizeof(client));
+        c_courant->c_suivant=c_suivant;
+        c_courant=c_suivant;
+    }*/
+    fscanf(fdat_client,"%2d",&nb_client);
+    for(i=1;i<=nb_client;i++){
+        fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
+        fgets(car,2,fdat_client);
+        for (j=1;j<=c_courant->nombre;j++){
+            fgets(c_courant->entree[j],36,fdat_client);
+            fgets(car,3,fdat_client);
+            fgets(c_courant->platP[j],36,fdat_client);
+            fgets(car,3,fdat_client);
+            fgets(c_courant->dessert[j],36,fdat_client);
+            fgets(car,3,fdat_client);
+            fgets(c_courant->boisson[j],36,fdat_client);
+            fgets(car,3,fdat_client);
+        }
+        c_suivant=malloc(sizeof(client));
+        c_courant->c_suivant=c_suivant;
+        c_courant=c_suivant;
+    }
+
+
+
     /* On termine la liste avec l'adresse NULL */
     for(i = 1 ; i < nb_client ; i ++){
-        c_courant = c_courant -> c_suivant;
+        c_courant = c_courant->c_suivant;
     }
     c_courant->c_suivant = NULL;
     free(c_suivant);
@@ -220,13 +253,13 @@ main(){
             case '4':
                 /* Ajouter un client par réservation */
                 system("cls");
+                affiche_client(c_deb,nb_client);
                 system("pause");
                 break;
             case '5':
                 /* Ajouter un client sur place */
                 system("cls");
-
-
+                nb_client = ajout_client(&c_deb,p_deb, &t_deb, 2,nb_resto,nb_plat,nb_table, nb_client, &nb_place_dispo);
                 system("pause");
                 break;
             case '6':

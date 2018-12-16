@@ -35,6 +35,9 @@
 		<Unit filename="affiche_carte.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="affiche_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="affiche_staff.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -43,8 +46,6 @@
 		</Unit>
 		<Unit filename="ajout_client.c">
 			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="ajout_staff.c">
 			<Option compilerVar="CC" />
@@ -55,6 +56,9 @@
 		</Unit>
 		<Unit filename="clean_buffer.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="client.dat">
+			<Option virtualFolder="#dat/" />
 		</Unit>
 		<Unit filename="header.h">
 			<Option compile="1" />

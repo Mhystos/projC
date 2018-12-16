@@ -41,17 +41,17 @@ typedef struct employe{
     char role[10];
     struct employe *e_suivant;
 }employe;
-/*Structure d'un client */
 
-typedef struct client
-    int num_table;
+/*Structure d'un client */
+typedef struct client{
+    int numt;
     int nombre;
-    char lb_entree[13][37];
-    char lb_plat[13][37];
-    char lb_dessert[13][37];
-    char lb_boisson[13][37];
+    char entree[13][37];
+    char platP[13][37];
+    char dessert[13][37];
+    char boisson[13][37];
     int reservation; // 1 = réservation ; 2 = walk-in
-    char heures[8]; //hh:mm
+    char heures[6]; //hh:mm
     struct client *c_suivant;
 }client;
 
@@ -59,11 +59,12 @@ typedef struct client
     int ajout_staff(employe* *e_deb, int n_employe);
     int supp_staff(employe* *e_deb,int n_employe);
 
-    int ajout_client(client* *c_deb, plat *p_deb, table *t_deb, int reserve, int n_resto, int n_plat, int n_table, int n_client, int *nb_place_dispo);
+    int ajout_client(client* *c_deb, plat *p_deb, table* *t_deb, int reserve, int n_resto, int n_plat, int n_table, int n_client, int * nb_place_dispo);
 
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);
     void affiche_staff(employe *e_deb, int n_employe);
+    void affiche_client(client *c_deb, int n_client);
 
     void clean_buffer(int integer);
 
