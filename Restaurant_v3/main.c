@@ -199,34 +199,34 @@ main(){
         printf("+------------------------------------------+\n");
         printf("|       Affichage des listes               |\n");
         printf("+------------------------------------------+\n");
-        printf("|   1 - Carte du restaurant                |\n");
-        printf("|   2 - Disposition des tables             |\n");
-        printf("|   3 - Liste des employes                 |\n");
+        printf("|   1  - Carte du restaurant               |\n");
+        printf("|   2  - Disposition des tables            |\n");
+        printf("|   3  - Liste des employes                |\n");
+        printf("|   4  - Liste des clients                 |\n");
         printf("+------------------------------------------+\n");
         printf("|       Passer une commande                |\n");
         printf("+------------------------------------------+\n");
-        printf("|   4 - Reservation                        |\n");
-        printf("|   5 - Walk - in                          |\n");
+        printf("|   5  - Reservation                       |\n");
+        printf("|   6  - Walk - in                         |\n");
         printf("+------------------------------------------+\n");
         printf("|       Ajout - Suppression                |\n");
         printf("+------------------------------------------+\n");
-        printf("|   6 - Ajout d'un employe                 |\n");
-        printf("|   7 - Suppression  d'un employe          |\n");
+        printf("|   7  - Ajout d'un employe                |\n");
+        printf("|   8  - Suppression  d'un employe         |\n");
         printf("+------------------------------------------+\n");
         printf("|       Paiement et impression             |\n");
         printf("+------------------------------------------+\n");
-        printf("|   8 - Afficher et payer l'addition       |\n");
+        printf("|   9  - Afficher et payer l'addition      |\n");
         printf("+------------------------------------------+\n");
-        printf("+   9 - Sauvegarder                        |\n");
-    	printf("|   0 - Quitter le programme               |\n");
+        printf("+   10 - Sauvegarder                       |\n");
+    	printf("|   0  - Quitter le programme              |\n");
     	printf("+------------------------------------------+\n");
     	printf("|   Quel est votre choix?                  |\n");
     	printf("+------------------------------------------+\n");
         printf("Choix : ");
-        choix = getchar();
-        clean_buffer(choix);
+        scanf("%2d",&choix);
         switch(choix){
-            case '0':
+            case 0:
                 /* Sortir du programme */
                 system("cls");
                 printf("+------------------------------------------+\n");
@@ -240,37 +240,42 @@ main(){
                 end = 1;
                 break;
 
-            case '1' :
+            case 1 :
                 /* Affichage de la carte du restaurant */
                 system ("cls");
                 affiche_carte(p_deb,nb_plat);
                 system("pause");
                 break;
-            case '2':
+            case 2:
                 /* Afficher la liste des tables */
                 system("cls");
                 affiche_table(t_deb,nb_table,nb_resto);
                 system("pause");
                 break;
-            case '3':
+            case 3:
                 /* Afficher la liste des employes */
                 system("cls");
                 affiche_staff(e_deb,nb_employe);
                 system("pause");
                 break;
-            case '4':
-                /* Ajouter un client par réservation */
+            case 4:
                 system("cls");
                 affiche_client(c_deb,nb_client);
                 system("pause");
                 break;
-            case '5':
+            case 5:
+                /* Ajouter un client par réservation */
+                system("cls");
+                nb_client = ajout_client(&c_deb,p_deb, &t_deb, 1,nb_resto,nb_plat,nb_table, nb_client, &nb_place_dispo);
+                system("pause");
+                break;
+            case 6:
                 /* Ajouter un client sur place */
                 system("cls");
                 nb_client = ajout_client(&c_deb,p_deb, &t_deb, 2,nb_resto,nb_plat,nb_table, nb_client, &nb_place_dispo);
                 system("pause");
                 break;
-            case '6':
+            case 7:
                 /* Ajouter un employe */
                 system("cls");
                 affiche_staff(e_deb,nb_employe);
@@ -278,7 +283,7 @@ main(){
                 affiche_staff(e_deb,nb_employe);
                 system("pause");
                 break;
-            case '7':
+            case 8:
                 /* Supprimer un employe */
                 system("cls");
                 affiche_staff(e_deb,nb_employe);
@@ -286,14 +291,14 @@ main(){
                 affiche_staff(e_deb,nb_employe);
                 system("pause");
                 break;
-            case '8':
+            case 9:
                 /* Ecrire l'addition et supprimer le client */
                 system("cls");
 
 
                 system("pause");
                 break;
-            case '9':
+            case 10:
                 /* Sauvegarder les informations */
                 system("cls");
 
@@ -307,28 +312,4 @@ main(){
         }
 
     }while(end != 1);
-
-
-
-
-    /*******************************************************/
-    /*                      TESTS                          */
-    /*******************************************************/
-
-
-    //run (p_deb,t_deb,e_deb,nb_plat,nb_table,nb_resto,nb_employe);
-    //affiche_carte(p_deb,nb_plat);
-    //clean_buffer(nb_resto);
-    //affiche_table(t_deb,nb_table,nb_resto);
-    //affiche_staff(e_deb,nb_employe);
-
-
-
-
-
-
-
-
-
-
 }
