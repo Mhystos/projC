@@ -32,6 +32,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="addition.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="affiche_carte.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -64,6 +67,9 @@
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="save.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="staff.dat">
