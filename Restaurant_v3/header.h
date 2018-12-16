@@ -50,6 +50,7 @@ typedef struct client{
     char platP[13][37];
     char dessert[13][37];
     char boisson[13][37];
+    float prix[13][5];
     int reservation; // 1 = réservation ; 2 = walk-in
     char heures[6]; //hh:mm
     struct client *c_suivant;

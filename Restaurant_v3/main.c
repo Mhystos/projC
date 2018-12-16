@@ -162,13 +162,17 @@ main(){
         fgets(car,2,fdat_client);
         for (j=1;j<=c_courant->nombre;j++){
             fgets(c_courant->entree[j],36,fdat_client);
-            fgets(car,3,fdat_client);
+            fscanf(fdat_client, "%5f", &c_courant->prix[j][1]);
+            fgets(car,2,fdat_client);
             fgets(c_courant->platP[j],36,fdat_client);
-            fgets(car,3,fdat_client);
+            fscanf(fdat_client, "%5f", &c_courant->prix[j][2]);
+            fgets(car,2,fdat_client);
             fgets(c_courant->dessert[j],36,fdat_client);
-            fgets(car,3,fdat_client);
+            fscanf(fdat_client, "%5f", &c_courant->prix[j][3]);
+            fgets(car,2,fdat_client);
             fgets(c_courant->boisson[j],36,fdat_client);
-            fgets(car,3,fdat_client);
+            fscanf(fdat_client, "%5f", &c_courant->prix[j][4]);
+            fgets(car,2,fdat_client);
         }
         c_suivant=malloc(sizeof(client));
         c_courant->c_suivant=c_suivant;
