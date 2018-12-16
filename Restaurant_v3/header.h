@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <ctype.h> // Pour le isdigit()
 
 /*Structure d'un plat*/
 typedef struct plat{
@@ -42,23 +43,28 @@ typedef struct employe{
 }employe;
 /*Structure d'un client */
 
-/*typedef struct client
+typedef struct client
     int num_table;
     int nombre;
-    char lb_entree[37];
-    char lb_plat[37];
-    char lb_dessert[37];
+    char lb_entree[13][37];
+    char lb_plat[13][37];
+    char lb_dessert[13][37];
+    char lb_boisson[13][37];
+    int reservation; // 1 = réservation ; 2 = walk-in
+    char heures[8]; //hh:mm
     struct client *c_suivant;
-    int heures; // En heure
-}client;*/
+}client;
 
 /* Appel des différents prototypes */
     int ajout_staff(employe* *e_deb, int n_employe);
     int supp_staff(employe* *e_deb,int n_employe);
 
+    int ajout_client(client* *c_deb, plat *p_deb, table *t_deb, int reserve, int n_resto, int n_plat, int n_table, int n_client, int *nb_place_dispo);
+
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);
     void affiche_staff(employe *e_deb, int n_employe);
+
     void clean_buffer(int integer);
 
 #endif // HEADER_H_INCLUDED

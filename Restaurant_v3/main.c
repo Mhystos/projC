@@ -12,22 +12,23 @@ main(){
     table *t_deb, *t_courant, *t_suivant;
     plat *p_deb, *p_courant, *p_suivant;
     employe *e_deb, *e_courant, *e_suivant, *e_precedent;
-    //client *c_deb,*c_courant, *c_suivant, *c_intercale;
+    client *c_deb,*c_courant, *c_suivant, *c_intercale;
 
     /* Variable */
-    int nb_place_dispo;
     int nb_resto=0;
     int nb_table=0;
 
+    int nb_client =0;
     int nb_plat=0;
     int nb_employe=0;
 
-    int end=0, endSub, choix;
+    int end=0, choix;
+
     /* Compteur */
     int i;
 
-    /* Pointer */
-    int *nb_client;
+    /* Pointeur */
+    int *nb_place_dispo;
 
     /* Fichier dat */
     FILE *fdat_carte, *fdat_table, *fdat_staff;
@@ -79,8 +80,7 @@ main(){
     fscanf(fdat_table,"%2d",&nb_table);
 
      for(i=1;i<=nb_table;i++){
-        fscanf(fdat_table,"%2d%2d",&t_courant->numero,&t_courant->place);
-        t_courant->libre = 0;
+        fscanf(fdat_table,"%2d%2d%1d",&t_courant->numero,&t_courant->place, &t_courant->libre);
 
         t_suivant=malloc(sizeof(table));
         t_courant->t_suivant=t_suivant;
@@ -133,8 +133,15 @@ main(){
     /*******************************************************/
 
     /* Allocation de mémoire pour la liste  de client      */
-    //c_deb=malloc(sizeof(client));
-    //c_courant=c_deb;
+    c_deb=malloc(sizeof(client));
+    c_courant=c_deb;
+
+    /* On termine la liste avec l'adresse NULL */
+    for(i = 1 ; i < nb_client ; i ++){
+        c_courant = c_courant -> c_suivant;
+    }
+    c_courant->c_suivant = NULL;
+    free(c_suivant);
 
 
 
@@ -213,7 +220,6 @@ main(){
             case '4':
                 /* Ajouter un client par réservation */
                 system("cls");
-
                 system("pause");
                 break;
             case '5':
