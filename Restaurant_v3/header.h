@@ -69,4 +69,6 @@ typedef struct client{
 
     void clean_buffer(int integer);
 
+    //void save (FILE *fdat_table, FILE *fdat_staff, FILE *fdat_test, int n_client, int n_employe, int n_table, table *t_deb, employe *e_deb, client *c_deb);
+
 #endif // HEADER_H_INCLUDED

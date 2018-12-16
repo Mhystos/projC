@@ -11,7 +11,7 @@ main(){
     /* Structure */
     table *t_deb, *t_courant, *t_suivant;
     plat *p_deb, *p_courant, *p_suivant;
-    employe *e_deb, *e_courant, *e_suivant, *e_precedent;
+    employe *e_deb, *e_courant, *e_suivant;
     client *c_deb,*c_courant, *c_suivant, *c_intercale;
 
     /* Variable */
@@ -32,11 +32,12 @@ main(){
     int *nb_place_dispo =0;
 
     /* Fichier dat */
-    FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client;
+    FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client,*fdat_test;
     fdat_carte=fopen("carte.dat","r");
     fdat_table=fopen("table.dat","r");
     fdat_staff=fopen("staff.dat","r");
     fdat_client=fopen("client.dat","r");
+    //fdat_test=fopen("test.dat","r");
 
 
     /*******************************************************/
@@ -146,18 +147,8 @@ main(){
     c_courant=c_deb;
 
     /* Lecture de client.dat */
-/*    fscanf(fdat_client,"%2d",&nb_client);
-    for(i=1;i<=nb_client;i++){
-        fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
-        for (j=1;j<=c_courant->nombre;j++){
-            fscanf(fdat_client,"%2d %2d %2d %2d",&c_courant->entree[j],&c_courant->platP[j],&c_courant->dessert[j],&c_courant->boisson[j]);
-        }
-        c_suivant=malloc(sizeof(client));
-        c_courant->c_suivant=c_suivant;
-        c_courant=c_suivant;
-    }*/
-    fscanf(fdat_client,"%2d",&nb_client);
-    for(i=1;i<=nb_client;i++){
+    fscanf(fdat_client,"%d",&nb_client);
+  for(i=1;i<=nb_client;i++){
         fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
         fgets(car,2,fdat_client);
         for (j=1;j<=c_courant->nombre;j++){
@@ -172,7 +163,9 @@ main(){
             fgets(car,2,fdat_client);
             fgets(c_courant->boisson[j],36,fdat_client);
             fscanf(fdat_client, "%5f", &c_courant->prix[j][4]);
-            fgets(car,2,fdat_client);
+            if(j!=c_courant->nombre){
+                fgets(car,2,fdat_client);
+            }
         }
         c_suivant=malloc(sizeof(client));
         c_courant->c_suivant=c_suivant;
@@ -299,14 +292,12 @@ main(){
                 /* Ecrire l'addition et supprimer le client */
                 system("cls");
 
-
                 system("pause");
                 break;
             case 10:
                 /* Sauvegarder les informations */
                 system("cls");
-
-
+                //save (fdat_table,fdat_staff,fdat_test,nb_client,nb_employe,nb_table,t_deb,e_deb,c_deb);
                 system("pause");
                 break;
             default:
