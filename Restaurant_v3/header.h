@@ -59,7 +59,7 @@ typedef struct client{
     int ajout_staff(employe* *e_deb, int n_employe);
     int supp_staff(employe* *e_deb,int n_employe);
 
-    int ajout_client(client* *c_deb, plat *p_deb, table* *t_deb, int reserve, int n_resto, int n_plat, int n_table, int n_client, int * nb_place_dispo);
+    int ajout_client(client* *c_deb, plat *p_deb, table* *t_deb, int reserve, int n_resto, int n_plat, int n_table, int n_client, int *nb_place_dispo);
 
     void affiche_carte(plat *p_deb, int n);
     void affiche_table(table *t_deb, int nt, int nr);

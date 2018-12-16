@@ -21,6 +21,7 @@ main(){
     int nb_client =0;
     int nb_plat=0;
     int nb_employe=0;
+    int n_place_dispo=0;
 
     int end=0, choix;
 
@@ -28,7 +29,7 @@ main(){
     int i,j;
 
     /* Pointeur */
-    int *nb_place_dispo;
+    int *nb_place_dispo =0;
 
     /* Fichier dat */
     FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client;
@@ -91,12 +92,19 @@ main(){
     /*On termine la liste avec l'adresse NULL */
     t_courant=t_deb;
     nb_resto+=t_deb->place;
+    if(t_courant->libre==0){
+        n_place_dispo+=t_courant->place;
+    }
     for(i=1;i<nb_table;i++){
         t_courant=t_courant->t_suivant;
         nb_resto+=t_courant->place;
+        if(t_courant->libre==0){
+            n_place_dispo+=t_courant->place;
+        }
     }
     t_courant->t_suivant=NULL;
     free(t_suivant);
+    nb_place_dispo = n_place_dispo;
 
     /*******************************************************/
     /*                      EMPLOYE                        */
