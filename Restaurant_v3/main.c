@@ -310,7 +310,6 @@ main(){
                 /* Ecrire l'addition et supprimer le client */
                 system("cls");
                 addition(&c_deb, &nb_client, &t_deb, nb_table);
-                affiche_client(c_deb,nb_client);
                 system("pause");
                 break;
             case 10:

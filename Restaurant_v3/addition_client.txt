@@ -4,16 +4,23 @@
 +---       ------------------------       ---+
 +---       ------------------------       ---+
 |                                            |
-| Table n.  4                                |
+| Table n.  8                                |
 |                                            |
-| Commande pour la personne n.  1/ 1         |
+| Commande pour la personne n.  1/ 2         |
 |                                            |
 | Salade de chevre chaud               5.75e |
 | Brochettes de poulet au barbecue    14.60e |
-| Tarte aux pommes                     7.55e |
+| Souffle au chocolat                  7.00e |
 | Coca-Cola 33cl                       2.00e |
 |                                            |
-|  Total a payer :                    29.90e |
+| Commande pour la personne n.  2/ 2         |
+|                                            |
+| Tatare de saumon et d'avocat         7.55e |
+| Risotto aux champignons             13.50e |
+| Creme caramel                        6.50e |
+| Bouteille eau petillante 50cl        1.50e |
+|                                            |
+|  Total a payer :                    58.40e |
 |  Incl. TVA et Taxes                        |
 +---       ------------------------       ---+
 +---       ------------------------       ---+

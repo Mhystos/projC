@@ -29,12 +29,13 @@
 1544723565 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\clean_buffer.c
 	"header.h"
 
-1545077826 d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
+1544993643 d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<ctype.h>
 
-1545077826 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\main.c
+1544993663 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\main.c
 	"header.h"
 
 1544802518 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\run.c
@@ -43,10 +44,11 @@
 1544958698 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_carte.c
 	"header.h"
 
-1545077826 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
+1544993643 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<ctype.h>
 
 1544779094 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\init_carte.c
 	"header.h"
@@ -54,10 +56,10 @@
 1544777873 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\init_table.c
 	"header.h"
 
-1545077826 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_table.c
+1544970678 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_table.c
 	"header.h"
 
-1545077992 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\ajout_client.c
+1544994435 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\ajout_client.c
 	"header.h"
 
 1544802508 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_staff.c
@@ -69,13 +71,13 @@
 1544826210 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\supp_staff.c
 	"header.h"
 
-1545063955 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_client.c
+1544994618 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\affiche_client.c
 	"header.h"
 
 1544958698 source:c:\users\quentin g\desktop\restaurant_v3\affiche_carte.c
 	"header.h"
 
-1545065068 c:\users\quentin g\desktop\restaurant_v3\header.h
+1545077836 c:\users\quentin g\desktop\restaurant_v3\header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -84,7 +86,7 @@
 1544802508 source:c:\users\quentin g\desktop\restaurant_v3\affiche_staff.c
 	"header.h"
 
-1545065217 source:c:\users\quentin g\desktop\restaurant_v3\affiche_table.c
+1545078001 source:c:\users\quentin g\desktop\restaurant_v3\affiche_table.c
 	"header.h"
 
 1544826195 source:c:\users\quentin g\desktop\restaurant_v3\ajout_staff.c
@@ -99,27 +101,21 @@
 1545063955 source:c:\users\quentin g\desktop\restaurant_v3\affiche_client.c
 	"header.h"
 
-1545065068 source:c:\users\quentin g\desktop\restaurant_v3\header.h
+1545077836 source:c:\users\quentin g\desktop\restaurant_v3\header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 
-1545065992 source:c:\users\quentin g\desktop\restaurant_v3\main.c
+1545079542 source:c:\users\quentin g\desktop\restaurant_v3\main.c
 	"header.h"
 
-1545065129 source:c:\users\quentin g\desktop\restaurant_v3\ajout_client.c
+1545078060 source:c:\users\quentin g\desktop\restaurant_v3\ajout_client.c
 	"header.h"
 
 1545064476 source:c:\users\quentin g\desktop\restaurant_v3\addition.c
 	"header.h"
 
 1545065593 source:c:\users\quentin g\desktop\restaurant_v3\save.c
-	"header.h"
-
-1545064476 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\addition.c
-	"header.h"
-
-1545065593 source:d:\2bi1-b1\q1\c\projc\restaurant_v3\save.c
 	"header.h"
 

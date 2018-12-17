@@ -230,6 +230,22 @@ void addition(client* *c_deb, int *n_client, table* *t_deb, int n_table) {
 
         (*n_client) --;
 
+        /* Parcours de la liste des clients */
+
+        c_courant = *c_deb;
+        printf("+---------------+----------+---------------+---------------+\n");
+        printf("| Numero client | N. table | Nbre. personne| Heure arrivee |\n");
+        printf("+---------------+----------+---------------+---------------+\n");
+
+        for(i = 1 ; i <= *n_client ; i ++) {
+            printf("|      %2d       |    %2d    |      %2d       |     %5s     |\n", i, c_courant->numt, c_courant->nombre, c_courant->heures);
+            c_courant = c_courant->c_suivant;
+        }
+
+        printf("+---------------+----------+---------------+---------------+\n");
+
+        printf("\n");
+
     }
     else {
         printf("Veuillez selectionner un numero propose dans la liste ci-dessus.\n");

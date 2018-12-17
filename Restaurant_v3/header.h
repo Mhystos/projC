@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <ctype.h> // Pour le isdigit()
 
 /*Structure d'un plat*/
 typedef struct plat{
