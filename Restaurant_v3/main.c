@@ -11,45 +11,52 @@ main(){
     /* Structure */
     table *t_deb, *t_courant, *t_suivant;
     plat *p_deb, *p_courant, *p_suivant;
-    employe *e_deb, *e_courant, *e_suivant;
+    employe *e_deb, *e_courant, *e_suivant, *e_precedent;
     client *c_deb,*c_courant, *c_suivant, *c_intercale;
 
     /* Variable */
-    int nb_resto=0;
-    int nb_table=0;
 
-    int nb_client =0;
-    int nb_plat=0;
-    int nb_employe=0;
-    int n_place_dispo=0;
+    // Plat
+    char car[3]; // Pour le passage à la ligne
 
-    int end=0, choix;
-
-    /* Compteur */
-    int i,j;
-
-    /* Pointeur */
+    // Table
+    int nb_resto = 0;
+    int nb_table = 0;
     int *nb_place_dispo =0;
+
+    // Client
+    //char c; // Lecture anticipée pour voir si le fichier n'est pas vide
+    int nb_client = 0;
+    int nb_plat = 0;
+    int nb_employe = 0;
+    int n_place_dispo = 0;
+
+    // Menu
+    int end = 0, choix, saved;
+
+    // Compteur
+    int i, j;
+
+
 
     /* Fichier dat */
     FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client;
-    fdat_carte=fopen("carte.dat","r");
-    fdat_table=fopen("table.dat","r");
-    fdat_staff=fopen("staff.dat","r");
-    fdat_client=fopen("client.dat","r");
+    fdat_carte  = fopen("carte.dat" , "r");
+    fdat_table  = fopen("table.dat" , "r");
+    fdat_staff  = fopen("staff.dat" , "r");
+    fdat_client = fopen("client.dat", "r");
 
 
     /*******************************************************/
     /*                      PLAT                           */
     /*******************************************************/
-    char car[3]; // Pour le passage à la ligne
 
     /* Allocation de mémoire pour la liste chainée de plat */
     p_deb = malloc(sizeof(plat));
     p_courant = p_deb;
 
     /* Lecture de carte.dat */
-    fscanf(fdat_carte,"%d",&nb_plat);
+    fscanf(fdat_carte, "%d", &nb_plat);
     fgets(car,2,fdat_carte);
 
     for(i=1;i<=nb_plat;i++){
@@ -141,13 +148,14 @@ main(){
     /*                      CLIENT                         */
     /*******************************************************/
 
+
     /* Allocation de mémoire pour la liste  de client      */
     c_deb=malloc(sizeof(client));
     c_courant=c_deb;
 
     /* Lecture de client.dat */
     fscanf(fdat_client,"%2d",&nb_client);
-  for(i=1;i<=nb_client;i++){
+    for(i=1;i<=nb_client;i++){
         fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
         fgets(car,2,fdat_client);
         for (j=1;j<=c_courant->nombre;j++){
@@ -162,10 +170,12 @@ main(){
             fgets(car,2,fdat_client);
             fgets(c_courant->boisson[j],36,fdat_client);
             fscanf(fdat_client, "%5f", &c_courant->prix[j][4]);
+
             if(j!=c_courant->nombre){
                 fgets(car,2,fdat_client);
             }
         }
+
         c_suivant=malloc(sizeof(client));
         c_courant->c_suivant=c_suivant;
         c_courant=c_suivant;
@@ -213,7 +223,7 @@ main(){
         printf("+------------------------------------------+\n");
         printf("|   9  - Afficher et payer l'addition      |\n");
         printf("+------------------------------------------+\n");
-        printf("+   10 - Sauvegarder                       |\n");
+        printf("+  10  - Sauvegarder                       |\n");
     	printf("|   0  - Quitter le programme              |\n");
     	printf("+------------------------------------------+\n");
     	printf("|   Quel est votre choix?                  |\n");
@@ -224,6 +234,16 @@ main(){
             case 0:
                 /* Sortir du programme */
                 system("cls");
+                printf("Quitter sans sauvegarder ? (0 = Oui | 1 = Non)\n");
+                printf("--------------------------\n> ");
+                scanf("%d", &saved);
+
+                if(saved == 1) {
+                    save(fdat_table,fdat_staff,fdat_client,nb_client,nb_employe,nb_table,t_deb,e_deb,c_deb);
+                }
+
+                system("pause");
+
                 printf("+------------------------------------------+\n");
                 printf("|                                          |\n");
                 printf("|          Merci de votre visite,          |\n");
@@ -244,7 +264,7 @@ main(){
             case 2:
                 /* Afficher la liste des tables */
                 system("cls");
-                affiche_table(t_deb,nb_table,nb_resto);
+                affiche_table(t_deb,nb_table,nb_resto, nb_place_dispo);
                 system("pause");
                 break;
             case 3:
@@ -289,7 +309,8 @@ main(){
             case 9:
                 /* Ecrire l'addition et supprimer le client */
                 system("cls");
-
+                addition(&c_deb, &nb_client, &t_deb, nb_table);
+                affiche_client(c_deb,nb_client);
                 system("pause");
                 break;
             case 10:

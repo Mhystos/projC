@@ -82,9 +82,6 @@
 			<Option virtualFolder="#dat/" />
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="test.dat">
-			<Option virtualFolder="#dat/" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
