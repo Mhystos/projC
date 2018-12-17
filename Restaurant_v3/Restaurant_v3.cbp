@@ -71,8 +71,6 @@
 		</Unit>
 		<Unit filename="save.c">
 			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="staff.dat">
 			<Option virtualFolder="#dat/" />

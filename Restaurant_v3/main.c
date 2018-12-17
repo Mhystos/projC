@@ -32,12 +32,11 @@ main(){
     int *nb_place_dispo =0;
 
     /* Fichier dat */
-    FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client,*fdat_test;
+    FILE *fdat_carte, *fdat_table, *fdat_staff,*fdat_client;
     fdat_carte=fopen("carte.dat","r");
     fdat_table=fopen("table.dat","r");
     fdat_staff=fopen("staff.dat","r");
     fdat_client=fopen("client.dat","r");
-    //fdat_test=fopen("test.dat","r");
 
 
     /*******************************************************/
@@ -147,7 +146,7 @@ main(){
     c_courant=c_deb;
 
     /* Lecture de client.dat */
-    fscanf(fdat_client,"%d",&nb_client);
+    fscanf(fdat_client,"%2d",&nb_client);
   for(i=1;i<=nb_client;i++){
         fscanf(fdat_client,"%2d %2d %1d %5s",&c_courant->numt,&c_courant->nombre,&c_courant->reservation,&c_courant->heures);
         fgets(car,2,fdat_client);
@@ -172,9 +171,8 @@ main(){
         c_courant=c_suivant;
     }
 
-
-
     /* On termine la liste avec l'adresse NULL */
+    c_courant=c_deb;
     for(i = 1 ; i < nb_client ; i ++){
         c_courant = c_courant->c_suivant;
     }
@@ -297,7 +295,7 @@ main(){
             case 10:
                 /* Sauvegarder les informations */
                 system("cls");
-                //save (fdat_table,fdat_staff,fdat_test,nb_client,nb_employe,nb_table,t_deb,e_deb,c_deb);
+                save(fdat_table,fdat_staff,fdat_client,nb_client,nb_employe,nb_table,t_deb,e_deb,c_deb);
                 system("pause");
                 break;
             default:
