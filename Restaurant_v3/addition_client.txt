@@ -1,0 +1,27 @@
++--------------------------------------------+
+|             Restaurant - Mons              |
+|                 Le FranTin                 |
++---       ------------------------       ---+
++---       ------------------------       ---+
+|                                            |
+| Table n.  4                                |
+|                                            |
+| Commande pour la personne n.  1/ 1         |
+|                                            |
+| Salade de chevre chaud               5.75e |
+| Brochettes de poulet au barbecue    14.60e |
+| Tarte aux pommes                     7.55e |
+| Coca-Cola 33cl                       2.00e |
+|                                            |
+|  Total a payer :                    29.90e |
+|  Incl. TVA et Taxes                        |
++---       ------------------------       ---+
++---       ------------------------       ---+
+|           Chaussee de Binche 159,          |
+|                 7000 MONS                  |
+|                                            |
+|          Tel  :  069 / 23 . 51 . 01        |
+|           @   :  contact@frantin.be        |
+|            Merci de votre visite           |
+|                  A bientot !               |
++--------------------------------------------+
