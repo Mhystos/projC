@@ -60,7 +60,7 @@ int ajout_client(client* *c_deb, plat *p_deb, table* *t_deb, int reserve, int n_
              * Si elle est libre, on la passe en "occupée" et on continue
              */
             do {
-                affiche_table(*t_deb, n_table, n_resto, nb_place_dispo);
+                affiche_table(*t_deb, n_table, n_resto,nb_place_dispo);
                 printf("Choix de la table pour %d personne(s)\n", tmp_personne);
                 printf("-------------------------------------\n");
                 printf("Choix : ");

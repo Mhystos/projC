@@ -264,7 +264,7 @@ main(){
             case 2:
                 /* Afficher la liste des tables */
                 system("cls");
-                affiche_table(t_deb,nb_table,nb_resto, nb_place_dispo);
+                affiche_table(t_deb,nb_table,nb_resto, &nb_place_dispo);
                 system("pause");
                 break;
             case 3:

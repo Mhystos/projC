@@ -11,7 +11,7 @@
 /* ********************************************/
 #include "header.h"
 
-void affiche_table(table *t_deb, int nt, int nr, int nb_place_dispo){
+void affiche_table(table *t_deb, int nt, int nr, int *nb_place_dispo){
 
     /* Variables */
     int i;
@@ -41,7 +41,7 @@ void affiche_table(table *t_deb, int nt, int nr, int nb_place_dispo){
     }
     printf("+-----------------------------------------------------+\n");
     printf("| Nombre de places totales dans le restaurant :    %d |\n", nr);
-    printf("| Places disponibles dans le restaurant :          %d |\n", nb_place_dispo);
+    printf("| Places disponibles dans le restaurant :          %d |\n", *nb_place_dispo);
     printf("+-----------------------------------------------------+\n");
 
 

@@ -63,7 +63,7 @@ typedef struct client{
     void addition(client* *c_deb, int *nb_client, table* *t_deb, int nt);
 
     void affiche_carte(plat *p_deb, int n);
-    void affiche_table(table *t_deb, int nt, int nr, int nb_place_dispo);
+    void affiche_table(table *t_deb, int nt, int nr, int *nb_place_dispo);
     void affiche_staff(employe *e_deb, int n_employe);
     void affiche_client(client *c_deb, int n_client);
 
