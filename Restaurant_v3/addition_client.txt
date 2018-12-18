@@ -4,23 +4,37 @@
 +---       ------------------------       ---+
 +---       ------------------------       ---+
 |                                            |
-| Table n.  8                                |
+| Table n.  2                                |
 |                                            |
-| Commande pour la personne n.  1/ 2         |
+| Commande pour la personne n.  1/ 4         |
+|                                            |
+| Tatare de saumon et d'avocat         7.55e |
+| Tagliatelles aux cepes              13.75e |
+| Gaufres                              6.00e |
+| Bouteille eau plate 50cl             1.50e |
+|                                            |
+| Commande pour la personne n.  2/ 4         |
 |                                            |
 | Salade de chevre chaud               5.75e |
 | Brochettes de poulet au barbecue    14.60e |
-| Souffle au chocolat                  7.00e |
+| Tarte aux pommes                     7.55e |
 | Coca-Cola 33cl                       2.00e |
 |                                            |
-| Commande pour la personne n.  2/ 2         |
+| Commande pour la personne n.  3/ 4         |
 |                                            |
-| Tatare de saumon et d'avocat         7.55e |
+| Veloute de marrons                   6.50e |
 | Risotto aux champignons             13.50e |
 | Creme caramel                        6.50e |
-| Bouteille eau petillante 50cl        1.50e |
+| Coca-Cola 33cl                       2.00e |
 |                                            |
-|  Total a payer :                    58.40e |
+| Commande pour la personne n.  4/ 4         |
+|                                            |
+| Veloute de marrons                   6.50e |
+| Risotto aux champignons             13.50e |
+| Coca-Cola 33cl                       2.00e |
+| Creme caramel                        6.50e |
+|                                            |
+|  Total a payer :                   115.70e |
 |  Incl. TVA et Taxes                        |
 +---       ------------------------       ---+
 +---       ------------------------       ---+
