@@ -1,0 +1,48 @@
++--------------------------------------------+
+|             Restaurant - Mons              |
+|                 Le FranTin                 |
++---       ------------------------       ---+
++---       ------------------------       ---+
+|                                            |
+| Table n.  2                                |
+|                                            |
+| Commande pour la personne n.  1/ 4         |
+|                                            |
+| Veloute de marrons                   6.50e |
+| Risotto aux champignons             13.50e |
+| Creme caramel                        6.50e |
+| Ice tea 33cl                         2.00e |
+|                                            |
+| Commande pour la personne n.  2/ 4         |
+|                                            |
+| Veloute de marrons                   6.50e |
+| Risotto aux champignons             13.50e |
+| Creme caramel                        6.50e |
+| Ice tea 33cl                         2.00e |
+|                                            |
+| Commande pour la personne n.  3/ 4         |
+|                                            |
+| Veloute de marrons                   6.50e |
+| Risotto aux champignons             13.50e |
+| Creme caramel                        6.50e |
+| Ice tea 33cl                         2.00e |
+|                                            |
+| Commande pour la personne n.  4/ 4         |
+|                                            |
+| Veloute de marrons                   6.50e |
+| Risotto aux champignons             13.50e |
+| Creme caramel                        6.50e |
+| Ice tea 33cl                         2.00e |
+|                                            |
+|  Total a payer :                   114.00e |
+|  Incl. TVA et Taxes                        |
++---       ------------------------       ---+
++---       ------------------------       ---+
+|           Chaussee de Binche 159,          |
+|                 7000 MONS                  |
+|                                            |
+|          Tel  :  069 / 23 . 51 . 01        |
+|           @   :  contact@frantin.be        |
+|            Merci de votre visite           |
+|                  A bientot !               |
++--------------------------------------------+
