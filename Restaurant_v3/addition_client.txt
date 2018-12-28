@@ -8,33 +8,33 @@
 |                                            |
 | Commande pour la personne n.  1/ 4         |
 |                                            |
-| Veloute de marrons                   6.50e |
+| Salade de chevre chaud               5.75e |
 | Risotto aux champignons             13.50e |
-| Creme caramel                        6.50e |
-| Ice tea 33cl                         2.00e |
+| Tarte aux pommes                     7.55e |
+| Bouteille eau petillante 50cl        1.50e |
 |                                            |
 | Commande pour la personne n.  2/ 4         |
 |                                            |
-| Veloute de marrons                   6.50e |
+| Salade de chevre chaud               5.75e |
 | Risotto aux champignons             13.50e |
-| Creme caramel                        6.50e |
-| Ice tea 33cl                         2.00e |
+| Tarte aux pommes                     7.55e |
+| Bouteille eau petillante 50cl        1.50e |
 |                                            |
 | Commande pour la personne n.  3/ 4         |
 |                                            |
-| Veloute de marrons                   6.50e |
+| Salade de chevre chaud               5.75e |
 | Risotto aux champignons             13.50e |
-| Creme caramel                        6.50e |
-| Ice tea 33cl                         2.00e |
+| Tarte aux pommes                     7.55e |
+| Bouteille eau petillante 50cl        1.50e |
 |                                            |
 | Commande pour la personne n.  4/ 4         |
 |                                            |
-| Veloute de marrons                   6.50e |
+| Salade de chevre chaud               5.75e |
 | Risotto aux champignons             13.50e |
-| Creme caramel                        6.50e |
-| Ice tea 33cl                         2.00e |
+| Tarte aux pommes                     7.55e |
+| Bouteille eau petillante 50cl        1.50e |
 |                                            |
-|  Total a payer :                   114.00e |
+|  Total a payer :                   113.20e |
 |  Incl. TVA et Taxes                        |
 +---       ------------------------       ---+
 +---       ------------------------       ---+
